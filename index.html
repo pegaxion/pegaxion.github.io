@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pegaxion - Mobile & Software Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0c10;
+      --card-bg: #12161f;
+      --border: #232936;
+      --text: #e1e7f0;
+      --text-muted: #8c9bb0;
+      --accent: #3b82f6;
+      --accent-glow: rgba(59, 130, 246, 0.25);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 80px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .brand span {
+      color: var(--accent);
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      margin-left: 24px;
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+    .hero {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      background: var(--accent-glow);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      border-radius: 999px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 44px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      color: #ffffff;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .subtitle {
+      font-size: 18px;
+      color: var(--text-muted);
+      max-width: 580px;
+      margin: 0 auto 32px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-bottom: 70px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 30px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(59, 130, 246, 0.4);
+    }
+    .card h3 {
+      font-size: 18px;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .cta-box {
+      background: linear-gradient(180deg, var(--card-bg) 0%, rgba(18, 22, 31, 0.6) 100%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+    }
+    .cta-box h2 {
+      font-size: 24px;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+    .cta-box p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+    .email-btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: var(--accent);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+    .email-btn:hover {
+      background: #2563eb;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: 80px;
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    footer a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 16px;
+    }
+    footer a:hover {
+      color: #ffffff;
+    }
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 32px;
+      }
+      nav {
+        margin-bottom: 40px;
+      }
+      footer {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+      footer a {
+        margin: 0 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <nav>
+      <a href="index.html" class="brand">PEGAX<span>ION</span></a>
+      <div class="nav-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <div class="badge">Mobile & Software Engineering</div>
+      <h1>Intuitive, robust apps crafted for everyday life.</h1>
+      <p class="subtitle">Pegaxion is an independent software studio building responsive utilities, productivity applications, and smart digital tools for iOS and Android.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Performance Focused</h3>
+        <p>Lightweight architectures and responsive interfaces engineered to run smoothly on any mobile device.</p>
+      </div>
+      <div class="card">
+        <h3>Privacy First</h3>
+        <p>Your data stays under your control. We design local-first workflows without invasive background tracking.</p>
+      </div>
+      <div class="card">
+        <h3>Continuous Craft</h3>
+        <p>Regular updates, rapid bug resolutions, and attentive user support across the Play Store and App Store.</p>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h2>Have inquiries or need support?</h2>
+      <p>Whether you're looking for support on our apps or want to share feedback, our developer inbox is open.</p>
+      <a href="mailto:pegaxion@gmail.com" class="email-btn">Contact pegaxion@gmail.com</a>
+    </div>
+
+    <footer>
+      <div>&copy; 2026 Pegaxion. All rights reserved.</div>
+      <div>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support & Deletion</a>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
